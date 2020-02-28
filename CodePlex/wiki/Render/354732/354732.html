@@ -1,0 +1,72 @@
+<div class="wikidoc"><h2>ICollection&lt;T&gt; Assertions</h2>These assertion extension methods can be applied to only ICollection&lt;T&gt; object types.<br />
+<ul><li><a href="#ShouldBeEmpty">ShouldBeEmpty</a></li>
+<li><a href="#ShouldNotBeEmpty">ShouldNotBeEmpty</a></li>
+<li><a href="#ShouldContain">ShouldContain</a></li>
+<li><a href="#ShouldNotContain">ShouldNotContain</a></li>
+<li><a href="#ShouldHaveCountOf">ShouldHaveCountOf</a></li></ul>
+<br /><a name="ShouldBeEmpty"></a>
+<h3>ShouldBeEmpty</h3>Asserts that this ICollection&lt;T&gt; does not contain any items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   List&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;();
+   foo.ShouldBeEmpty();
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><a name="ShouldNotBeEmpty"></a>
+<h3>ShouldNotBeEmpty</h3>Asserts that this ICollection&lt;T&gt; contains items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldNotBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldNotBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldNotBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   List&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldNotBeEmpty();
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><a name="ShouldContain"></a>
+<h3>ShouldContain</h3>Asserts that this ICollection&lt;T&gt; contains the specified item.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldContain&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, T item)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldContain&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldContain&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   List&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldContain(1);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><a name="ShouldNotContain"></a>
+<h3>ShouldNotContain</h3>Asserts that this ICollection&lt;T&gt; does not contain the specified item.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldNotContain&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, T item)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldNotContain&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldNotContain&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   List&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldNotContain(0);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><a name="ShouldHaveCountOf"></a>
+<h3>ShouldHaveCountOf</h3>Asserts that this ICollection&lt;T&gt; contains the specified number of items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">int</span> count)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> ICollection&lt;T&gt; ShouldHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> ICollection&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   List&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldHaveCountOf(3);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later</div><div class="ClearBoth"></div>

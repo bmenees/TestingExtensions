@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-11-18T06:01:14.777-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add assertions for DateTime type.",
+    "LastUpdatedDate": "2017-12-01T05:32:52.537-08:00",
+    "PlannedForRelease": "Visual Studio Testing Extensions 1.1",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "vstestingextensions",
+    "ReportedDate": "2009-02-06T19:22:35.577-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add DateTime Assertions",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 933
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 58515.",
+      "PostedDate": "2010-11-18T06:01:14.777-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-12T17:48:34.117-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-14T19:10:59.487-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-01T05:32:52.537-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

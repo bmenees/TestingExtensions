@@ -1,0 +1,26 @@
+<div class="wikidoc"><h2>Exception Assertions</h2>These methods allow you to assert the throwing of an exception.<br />
+<ul><li><a href="#ShouldThrowException">ShouldThrowException</a></li></ul>
+<br /><a name="ShouldThrowException"></a>
+<h3>ShouldThrowException</h3>Asserts that the Action should throw an exception.
+<h4>Usage</h4>Where <b>TExceptionType</b> is an Exception<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> TExceptionType ShouldThrowException&lt;TExceptionType&gt;(Action action) 
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> TExceptionType ShouldThrowException&lt;TExceptionType&gt;(Action action, <span style="color:Blue;">string</span> message) 
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> TExceptionType ShouldThrowException&lt;TExceptionType&gt;(Action action, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters) 
+</pre></div><h4>Remarks</h4>This method is contained in the <b>Testing</b> static class of the library.<br />Unlike the default Exception testing in Visual Studio, you can test multiple Exceptions within the same test method.
+<h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> zero = 0;
+   Testing.ShouldThrowException&lt;DivideByZeroException&gt;( () =&gt; <span style="color:Blue;">int</span> x = 12 / zero );
+}
+</pre></div><br /><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Green;">// Multiple expected exceptions can be tested in the same test method</span>
+   <span style="color:Blue;">int</span> zero = 0;
+   Testing.ShouldThrowException&lt;DivideByZeroException&gt;( () =&gt; <span style="color:Blue;">int</span> x = 12 / zero );
+   Testing.ShouldThrowException&lt;InvalidCastException&gt;( () =&gt; <span style="color:Blue;">bool</span> x = (<span style="color:Blue;">bool</span>)DateTime.Now );
+}
+</pre></div><b>Supported Releases:</b> All</div><div class="ClearBoth"></div>

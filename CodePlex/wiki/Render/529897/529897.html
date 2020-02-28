@@ -1,0 +1,22 @@
+<div class="wikidoc"><h2>Type Assertions</h2>These assertion extension methods can be applied to only Type object types.<br />
+<ul><li><a href="#ShouldBeAssignableFrom">ShouldBeAssignableFrom</a></li></ul>
+<br /><a name="ShouldBeAssignableFrom"></a>
+<h3>ShouldBeAssignableFrom</h3>Asserts that this type value is assignable from another type.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> Type ShouldBeAssignableFrom(<span style="color:Blue;">this</span> Type source, Type comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> Type ShouldBeAssignableFrom(<span style="color:Blue;">this</span> Type source, Type comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> Type ShouldBeAssignableFrom(<span style="color:Blue;">this</span> Type source, Type comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> Type ShouldBeAssignableFrom&lt;TComparer&gt;(<span style="color:Blue;">this</span> Type source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> Type ShouldBeAssignableFrom&lt;TComparer&gt;((<span style="color:Blue;">this</span> Type source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> Type ShouldBeAssignableFrom&lt;TComparer&gt;((<span style="color:Blue;">this</span> Type source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   Type foo = <span style="color:Blue;">typeof</span>(ICollection);
+   foo.ShouldBeAssignableFrom(IEnumerable);
+
+   Type foo = <span style="color:Blue;">typeof</span>(IList);
+   foo.ShouldBeAssignableFrom&lt;IEnumerable&gt;();
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /></div><div class="ClearBoth"></div>

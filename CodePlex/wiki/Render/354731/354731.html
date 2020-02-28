@@ -1,0 +1,66 @@
+<div class="wikidoc"><h2>DateTime Assertions</h2>These assertion extension methods can be applied to only DateTime object types.<br />
+<ul><li><a href="#ShouldBeBefore">ShouldBeBefore</a></li>
+<li><a href="#ShouldBeBeforeOrSameAs">ShouldBeBeforeOrSameAs</a></li>
+<li><a href="#ShouldBeAfter">ShouldBeAfter</a></li>
+<li><a href="#ShouldBeAfterOrSameAs">ShouldBeAfterOrSameAs</a></li></ul>
+<br /><a name="ShouldBeBefore"></a>
+<h3>ShouldBeBefore</h3>Asserts that this DateTime value is before the specified DateTime value.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeBefore(<span style="color:Blue;">this</span> DateTime source, DateTime comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeBefore(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeBefore(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   DateTime foo = DateTime.Now;
+   foo.ShouldBeBefore(Datetime.MaxValue);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldBeBeforeOrSameAs"></a>
+<h3>ShouldBeBeforeOrSameAs</h3>Asserts that this DateTime value is before or the same as the specified DateTime value.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeBeforeOrSameAs(<span style="color:Blue;">this</span> DateTime source, DateTime comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeBeforeOrSameAs(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeBeforeOrSameAs(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   DateTime foo = DateTime.Now;
+   foo.ShouldBeBeforeOrSameAs(Datetime.MaxValue);
+
+   DateTime foo = DateTime.Now;
+   foo.ShouldBeBeforeOrSameAs(foo);
+
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldBeAfter"></a>
+<h3>ShouldBeAfter</h3>Asserts that this DateTime value is after the specified DateTime value.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeAfter(<span style="color:Blue;">this</span> DateTime source, DateTime comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeAfter(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeAfter(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   DateTime foo = DateTime.Now;
+   foo.ShouldBeAfter(Datetime.MinValue);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldBeAfterOrSameAs"></a>
+<h3>ShouldBeAfterOrSameAs</h3>Asserts that this DateTime value is after or the same as the specified DateTime value.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeAfterOrSameAs(<span style="color:Blue;">this</span> DateTime source, DateTime comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeAfterOrSameAs(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> DateTime ShouldBeAfterOrSameAs(<span style="color:Blue;">this</span> DateTime source, DateTime comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   DateTime foo = DateTime.Now;
+   foo.ShouldBeAfterOrSameAs(Datetime.MinValue);
+
+   DateTime foo = DateTime.Now;
+   foo.ShouldBeAfterOrSameAs(foo);
+
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later</div><div class="ClearBoth"></div>

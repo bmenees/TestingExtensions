@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "531726",
+    "ThreadId": "237293",
+    "Html": "\r\n<p>you need to get this out on the primary nuget feed at nugetpackages.codeplex.com</p>\r\n",
+    "PostedDate": "2010-12-06T06:19:28.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "552786",
+    "ThreadId": "237293",
+    "Html": "\r\n<p>Thanks for the suggestion. Version 1.1.0.0 is now on the NuGet feed!</p>\r\n",
+    "PostedDate": "2011-01-20T11:38:47.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "645843",
+    "ThreadId": "237293",
+    "Html": "<p>@JeremiahClark, NuGet Package is not available, you must submit it again.</p>\r\n<p>Thanks for this projects.</p>",
+    "PostedDate": "2011-07-21T16:24:31.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

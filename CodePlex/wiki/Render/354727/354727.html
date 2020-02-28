@@ -1,0 +1,158 @@
+<div class="wikidoc"><h2>Numeric Assertions</h2>These assertion extension methods can be applied to only numeric object types (including <b>char</b> for the purposes of the documentation).<br />
+<ul><li><a href="#ShouldBeGreaterThan">ShouldBeGreaterThan</a></li>
+<li><a href="#ShouldBeGreaterThanOrEqualTo">ShouldBeGreaterThanOrEqualTo</a></li>
+<li><a href="#ShouldBeLessThan">ShouldBeLessThan</a></li>
+<li><a href="#ShouldBeLessThanOrEqualTo">ShouldBeLessThanOrEqualTo</a></li>
+<li><a href="#ShouldBeBetween">ShouldBeBetween</a></li>
+<li><a href="#ShouldNotBeBetween">ShouldNotBeBetween</a></li>
+<li><a href="#ShouldBePositive">ShouldBePositive</a></li>
+<li><a href="#ShouldBeNegative">ShouldBeNegative</a></li>
+<li><a href="#ShouldBeIntegral">ShouldBeIntegral</a></li>
+<li><a href="#ShouldBeFractional">ShouldBeFractional</a></li>
+<li><a href="#ShouldRoundTo">ShouldRoundTo</a></li></ul>
+<br /><a name="ShouldBeGreaterThan"></a>
+<h3>ShouldBeGreaterThan</h3>Asserts that this value is greater than a certain value.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, ushort, uint, ulong, byte, sbyte, char, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeGreaterThan(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeGreaterThan(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeGreaterThan(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldBeGreaterThan(4);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeGreaterThanOrEqualTo"></a>
+<h3>ShouldBeGreaterThanOrEqualTo</h3>Asserts that this value is greater than or equal to a certain value.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, ushort, uint, ulong, byte, sbyte, char, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeGreaterThanOrEqualTo(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeGreaterThanOrEqualTo(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeGreaterThanOrEqualTo(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldBeGreaterThanOrEqualTo(4);
+   number.ShouldBeGreaterThanOrEqualTo(5);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><br /><a name="ShouldBeLessThan"></a>
+<h3>ShouldBeLessThan</h3>Asserts that this value is less than a certain value.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, ushort, uint, ulong, byte, sbyte, char, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeLessThan(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeLessThan(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeLessThan(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldBeLessThan(6);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeLessThanOrEqualTo"></a>
+<h3>ShouldBeLessThanOrEqualTo</h3>Asserts that this value is less than or equal to a certain value.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, ushort, uint, ulong, byte, sbyte, char, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeLessThanOrEqualTo(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeLessThanOrEqualTo(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeLessThanOrEqualTo(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldBeLessThanOrEqualTo(5);
+   number.ShouldBeLessThanOrEqualTo(6);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeBetween"></a>
+<h3>ShouldBeBetween</h3>Asserts that this value is between two values.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, ushort, uint, ulong, byte, sbyte, char, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeBetween(<span style="color:Blue;">this</span> T source, T lowerInclusive, T upperInclusive)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeBetween(<span style="color:Blue;">this</span> T source, T lowerInclusive, T upperInclusive, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeBetween(<span style="color:Blue;">this</span> T source, T lowerInclusive, T upperInclusive, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldBeBetween(4, 6);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotBeBetween"></a>
+<h3>ShouldNotBeBetween</h3>Asserts that this value is not between two values.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, ushort, uint, ulong, byte, sbyte, char, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeBetween(<span style="color:Blue;">this</span> T source, T lowerExclusive, T upperExclusive)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeBetween(<span style="color:Blue;">this</span> T source, T lowerExclusive, T upperExclusive, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeBetween(<span style="color:Blue;">this</span> T source, T lowerExclusive, T upperExclusive, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldNotBeBetween(6, 9);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBePositive"></a>
+<h3>ShouldBePositive</h3>Asserts that this value is positive or zero.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, sbyte, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBePositive(<span style="color:Blue;">this</span> T source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBePositive(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBePositive(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldBePositive();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeNegative"></a>
+<h3>ShouldBeNegative</h3>Asserts that this value is negative.
+<h4>Usage</h4>Where <b>T</b> is: short, int, long, sbyte, float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeNegative(<span style="color:Blue;">this</span> T source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeNegative(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeNegative(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = -5;
+   number.ShouldBeNegative();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeIntegral"></a>
+<h3>ShouldBeIntegral</h3>Asserts that this value is integral (does not have a fractional component).
+<h4>Usage</h4>Where <b>T</b> is: float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeIntegral(<span style="color:Blue;">this</span> T source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeIntegral(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeIntegral(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">double</span> number = 3.0;
+   number.ShouldBeIntegral();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeFractional"></a>
+<h3>ShouldBeFractional</h3>Asserts that this value is has a fractional component.
+<h4>Usage</h4>Where <b>T</b> is: float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeFractional(<span style="color:Blue;">this</span> T source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeFractional(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeFractional(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">double</span> number = 3.34;
+   number.ShouldBeFractional();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldRoundTo"></a>
+<h3>ShouldRoundTo</h3>Asserts that this value rounds to a specified value.
+<h4>Usage</h4>Where <b>T</b> is: float, double, or decimal<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldRoundTo(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldRoundTo(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldRoundTo(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">double</span> number = 3.34;
+   number.ShouldRoundTo(3);
+}
+</pre></div><b>Supported Releases:</b> All</div><div class="ClearBoth"></div>

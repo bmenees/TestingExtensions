@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "225625",
+    "ThreadId": "66420",
+    "Html": "<p>I've got more than one project I'm testing.</p>\r\n<p>Where's the best place to copy the files to so that all projects have access to them.</p>\r\n<p>Thanks, LisaAn</p>",
+    "PostedDate": "2009-08-19T15:18:16.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227126",
+    "ThreadId": "66420",
+    "Html": "<p>I experimented a bit and found that this works. I copied the files to <strong><em>C:\\Program Files (x86)\\Microsoft Visual Studio 9.0\\Common7\\IDE\\PrivateAssemblies</em></strong></p>\r\n<p>I put this in my main file: &quot;<em><strong>using SoftwareApproach.TestingExtensions;</strong></em>&quot;</p>\r\n<p>Regards,</p>\r\n<p>LisaAn</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-08-24T10:09:01.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

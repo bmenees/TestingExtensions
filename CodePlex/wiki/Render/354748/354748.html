@@ -1,0 +1,114 @@
+<div class="wikidoc"><h2>IEnumerable&lt;T&gt; Assertions</h2>These assertion extension methods can be applied to only IEnumerable&lt;T&gt; object types.<br />
+<ul><li><a href="#ShouldBeEmpty">ShouldBeEmpty</a></li>
+<li><a href="#ShouldNotBeEmpty">ShouldNotBeEmpty</a></li>
+<li><a href="#ShouldContain">ShouldContain</a></li>
+<li><a href="#ShouldNotContain">ShouldNotContain</a></li>
+<li><a href="#ShouldHaveCountOf">ShouldHaveCountOf</a></li>
+<li><a href="#ShouldNotHaveCountOf">ShouldNotHaveCountOf</a></li>
+<li><a href="#ShouldHaveCountOfAtLeast">ShouldHaveCountOfAtLeast</a></li>
+<li><a href="#ShouldHaveCountOfAtMost">ShouldHaveCountOfAtMost</a></li></ul>
+<br /><a name="ShouldBeEmpty"></a>
+<h3>ShouldBeEmpty</h3>Asserts that this IEnumerable&lt;T&gt; does not contain any items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;();
+   foo.ShouldBeEmpty();
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><a name="ShouldNotBeEmpty"></a>
+<h3>ShouldNotBeEmpty</h3>Asserts that this IEnumerable&lt;T&gt; contains items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotBeEmpty&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldNotBeEmpty();
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><a name="ShouldContain"></a>
+<h3>ShouldContain</h3>Asserts that this IEnumerable&lt;T&gt; contains the specified item.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldContain&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, T item)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldContain&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldContain&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldContain(1);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><a name="ShouldNotContain"></a>
+<h3>ShouldNotContain</h3>Asserts that this IEnumerable&lt;T&gt; does not contain the specified item.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotContain&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, T item)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotContain&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotContain&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, T item, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldNotContain(0);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><a name="ShouldHaveCountOf"></a>
+<h3>ShouldHaveCountOf</h3>Asserts that this IEnumerable&lt;T&gt; contains the specified number of items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldHaveCountOf(3);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><br /><a name="ShouldNotHaveCountOf"></a>
+<h3>ShouldNotHaveCountOf</h3>Asserts that this IEnumerable&lt;T&gt; does not contain the specified number of items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldNotHaveCountOf&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldNotHaveCountOf(4);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><br /><a name="ShouldHaveCountOfAtLeast"></a>
+<h3>ShouldHaveCountOfAtLeast</h3>Asserts that this IEnumerable&lt;T&gt; contains a minimum specified number of items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOfAtLeast&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOfAtLeast&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOfAtLeast&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldHaveCountOfAtLeast(2);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><br /><a name="ShouldHaveCountOfAtMost"></a>
+<h3>ShouldHaveCountOfAtMost</h3>Asserts that this IEnumerable&lt;T&gt; contains a maximum specified number of items.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOfAtMost&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOfAtMost&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> IEnumerable&lt;T&gt; ShouldHaveCountOfAtMost&lt;T&gt;(<span style="color:Blue;">this</span> IEnumerable&lt;T&gt; source, <span style="color:Blue;">int</span> count, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   IEnumerable&lt;<span style="color:Blue;">int</span>&gt; foo = <span style="color:Blue;">new</span> List&lt;<span style="color:Blue;">int</span>&gt;() { 1, 2, 3 };
+   foo.ShouldHaveCountOfAtMost(4);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later</div><div class="ClearBoth"></div>

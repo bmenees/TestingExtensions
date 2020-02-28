@@ -1,0 +1,200 @@
+<div class="wikidoc"><h2>String and Char Assertions</h2>These assertion extension methods can be applied to only string object types (including <b>char</b> for the purposes of the documentation).<br />
+<ul><li><a href="#ShouldEqualIgnoringCase">ShouldEqualIgnoringCase</a></li>
+<li><a href="#ShouldNotEqualIgnoringCase">ShouldNotEqualIgnoringCase</a></li>
+<li><a href="#ShouldBeEmpty">ShouldBeEmpty</a></li>
+<li><a href="#ShouldNotBeEmpty">ShouldNotBeEmpty</a></li>
+<li><a href="#ShouldBePrintable">ShouldBePrintable</a></li>
+<li><a href="#ShouldNotBePrintable">ShouldNotBePrintable</a></li>
+<li><a href="#ShouldContain">ShouldContain</a></li>
+<li><a href="#ShouldContainIgnoringCase">ShouldContainIgnoringCase</a></li>
+<li><a href="#ShouldNotContain">ShouldNotContain</a></li>
+<li><a href="#ShouldNotContainIgnoringCase">ShouldNotContainIgnoringCase</a></li>
+<li><a href="#ShouldHaveLengthOf">ShouldHaveLengthOf</a></li>
+<li><a href="#ShouldNotHaveLengthOf">ShouldNotHaveLengthOf</a></li>
+<li><a href="#ShouldHaveLengthOfAtLeast">ShouldHaveLengthOfAtLeast</a></li>
+<li><a href="#ShouldHaveLengthOfAtMost">ShouldHaveLengthOfAtMost</a></li></ul>
+<br /><a name="ShouldEqualIgnoringCase"></a>
+<h3>ShouldEqualIgnoringCase</h3>Asserts that this string/char value is equal to the specified string/char (ignoring case).
+<h4>Usage</h4>Where <b>T</b> is: string or char<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldEqualIgnoringCase(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldEqualIgnoringCase(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldEqualIgnoringCase(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foo&quot;</span>;
+   foo.ShouldEqualIgnoringCase(<span style="color:#A31515;">&quot;FOO&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotEqualIgnoringCase"></a>
+<h3>ShouldNotEqualIgnoringCase</h3>Asserts that this string/char value is not equal to the specified string/char (ignoring case).
+<h4>Usage</h4>Where <b>T</b> is: string or char<br /><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotEqualIgnoringCase(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotEqualIgnoringCase(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotEqualIgnoringCase(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foo&quot;</span>;
+   foo.ShouldNotEqualIgnoringCase(<span style="color:#A31515;">&quot;BAR&quot;</span>);
+
+   foo.ShouldNotEqualIgnoringCase(<span style="color:#A31515;">&quot;FOO&quot;</span>);  <span style="color:Green;">// This assertion would fail</span>
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeEmpty"></a>
+<h3>ShouldBeEmpty</h3>Asserts that this string value is empty.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldBeEmpty(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldBeEmpty(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldBeEmpty(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;&quot;</span>;
+   foo.ShouldBeEmpty();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotBeEmpty"></a>
+<h3>ShouldNotBeEmpty</h3>Asserts that this string value is not empty.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotBeEmpty(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotBeEmpty(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotBeEmpty(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foo&quot;</span>;
+   foo.ShouldNotBeEmpty();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><br /><a name="ShouldBePrintable"></a>
+<h3>ShouldBePrintable</h3>Asserts that this char value is in the printable range.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">char</span> ShouldBePrintable(<span style="color:Blue;">this</span> <span style="color:Blue;">char</span> source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">char</span> ShouldBePrintable(<span style="color:Blue;">this</span> <span style="color:Blue;">char</span> source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">char</span> ShouldBePrintable(<span style="color:Blue;">this</span> <span style="color:Blue;">char</span> source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">char</span> foo = <span style="color:#A31515;">&quot;f&quot;</span>;
+   foo.ShouldBePrintable();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotBePrintable"></a>
+<h3>ShouldNotBePrintable</h3>Asserts that this char value is not in the printable range.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">char</span> ShouldNotBePrintable(<span style="color:Blue;">this</span> <span style="color:Blue;">char</span> source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">char</span> ShouldNotBePrintable(<span style="color:Blue;">this</span> <span style="color:Blue;">char</span> source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">char</span> ShouldNotBePrintable(<span style="color:Blue;">this</span> <span style="color:Blue;">char</span> source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">char</span> foo = (<span style="color:Blue;">char</span>)3;
+   foo.ShouldNotBePrintable();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldContain"></a>
+<h3>ShouldContain</h3>Asserts that this string value contains the specified substring.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldContain(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldContain(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldContain(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldContain(<span style="color:#A31515;">&quot;foo&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldContainIgnoringCase"></a>
+<h3>ShouldContainIgnoringCase</h3>Asserts that this string value contains the specified substring, ignoring case.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldContainIgnoringCase(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldContainIgnoringCase(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldContainIgnoringCase(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldContainIgnoringCase(<span style="color:#A31515;">&quot;FOO&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldNotContain"></a>
+<h3>ShouldNotContain</h3>Asserts that this string value does not contain the specified substring.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotContain(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotContain(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotContain(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldNotContain(<span style="color:#A31515;">&quot;bar&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldNotContainIgnoringCase"></a>
+<h3>ShouldNotContainIgnoringCase</h3>Asserts that this string value does not contain the specified substring, ignoring case.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotContainIgnoringCase(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotContainIgnoringCase(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotContainIgnoringCase(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">string</span> substring, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldNotContainIgnoringCase(<span style="color:#A31515;">&quot;TEST&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> 1.1 and later<br /><br /><a name="ShouldHaveLengthOf"></a>
+<h3>ShouldHaveLengthOf</h3>Asserts that this string value has a specified length.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOf(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOf(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOf(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldHaveLengthOf(6);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><br /><a name="ShouldNotHaveLengthOf"></a>
+<h3>ShouldNotHaveLengthOf</h3>Asserts that this string value does not have a specified length.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotHaveLengthOf(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotHaveLengthOf(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldNotHaveLengthOf(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldNotHaveLengthOf(5);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><br /><a name="ShouldHaveLengthOfAtLeast"></a>
+<h3>ShouldHaveLengthOfAtLeast</h3>Asserts that this string value has a minimum specified length.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOfAtLeast(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOfAtLeast(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOfAtLeast(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldHaveLengthOfAtLeast(5);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later<br /><br /><a name="ShouldHaveLengthOfAtMost"></a>
+<h3>ShouldHaveLengthOfAtMost</h3>Asserts that this string value has a maximum specified length.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOfAtMost(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOfAtMost(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">string</span> ShouldHaveLengthOfAtMost(<span style="color:Blue;">this</span> <span style="color:Blue;">string</span> source, <span style="color:Blue;">int</span> length, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foobar&quot;</span>;
+   foo.ShouldHaveLengthOfAtMost(7);
+}
+</pre></div><b>Supported Releases:</b> 1.2 and later</div><div class="ClearBoth"></div>

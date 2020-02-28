@@ -1,0 +1,126 @@
+<div class="wikidoc"><h2>Generic Assertions</h2>These assertion extension methods can be applied to any type of object.<br />
+<ul><li><a href="#ShouldEqual">ShouldEqual</a></li>
+<li><a href="#ShouldNotEqual">ShouldNotEqual</a></li>
+<li><a href="#ShouldBeSameAs">ShouldBeSameAs</a></li>
+<li><a href="#ShouldNotBeSameAs">ShouldNotBeSameAs</a></li>
+<li><a href="#ShouldBeNull">ShouldBeNull</a></li>
+<li><a href="#ShouldNotBeNull">ShouldNotBeNull</a></li>
+<li><a href="#ShouldBeOfType">ShouldBeOfType</a></li>
+<li><a href="#ShouldNotBeOfType">ShouldNotBeOfType</a></li></ul>
+<br /><a name="ShouldEqual"></a>
+<h3>ShouldEqual</h3>Asserts that this object is equal to another object.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldEqual&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldEqual&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldEqual&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldEqual(5);
+   
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foo&quot;</span>;
+   foo.ShouldEqual(<span style="color:#A31515;">&quot;foo&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotEqual"></a>
+<h3>ShouldNotEqual</h3>Asserts that this object is not equal to another object.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotEqual&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotEqual&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotEqual&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> number = 5;
+   number.ShouldNotEqual(4);
+   
+   <span style="color:Blue;">string</span> foo = <span style="color:#A31515;">&quot;foo&quot;</span>;
+   foo.ShouldNotEqual(<span style="color:#A31515;">&quot;bar&quot;</span>);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeSameAs"></a>
+<h3>ShouldBeSameAs</h3>Asserts that this object has the same reference as another object.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeSameAs&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeSameAs&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeSameAs&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> i = 4;
+   <span style="color:Blue;">object</span> firstObject = i;
+   <span style="color:Blue;">object</span> secondObject = firstObject;
+
+   firstObject.ShouldBeSameAs(secondObject);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><br /><a name="ShouldNotBeSameAs"></a>
+<h3>ShouldNotBeSameAs</h3>Asserts that this object does not have the same reference as another object.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeSameAs&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeSameAs&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeSameAs&lt;T&gt;(<span style="color:Blue;">this</span> T source, T comparer, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">int</span> i = 4;
+   <span style="color:Blue;">object</span> firstObject = i;
+   <span style="color:Blue;">object</span> secondObject = i;
+
+   firstObject.ShouldNotBeSameAs(secondObject);
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeNull"></a>
+<h3>ShouldBeNull</h3>Asserts that this object is null.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeNull&lt;T&gt;(<span style="color:Blue;">this</span> T source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeNull&lt;T&gt;(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeNull&lt;T&gt;(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">object</span> foo = <span style="color:Blue;">null</span>;
+   foo.ShouldBeNull();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotBeNull"></a>
+<h3>ShouldNotBeNull</h3>Asserts that this object is not null.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeNull&lt;T&gt;(<span style="color:Blue;">this</span> T source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeNull&lt;T&gt;(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeNull&lt;T&gt;(<span style="color:Blue;">this</span> T source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">object</span> foo = <span style="color:Blue;">new</span> <span style="color:Blue;">object</span>();
+   foo.ShouldNotBeNull();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeOfType"></a>
+<h3>ShouldBeOfType</h3>Asserts that this object is a certain type.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeOfType&lt;T&gt;(<span style="color:Blue;">this</span> T source, Type type)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeOfType&lt;T&gt;(<span style="color:Blue;">this</span> T source, Type type, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldBeOfType&lt;T&gt;(<span style="color:Blue;">this</span> T source, Type type, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">false</span>.ShouldBeOfType(<span style="color:Blue;">typeof</span>(<span style="color:Blue;">bool</span>));
+   <span style="color:#A31515;">&quot;foo&quot;</span>.ShouldBeOfType(<span style="color:Blue;">typeof</span>(<span style="color:Blue;">string</span>));
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldNotBeOfType"></a>
+<h3>ShouldNotBeOfType</h3>Asserts that this object is not a certain type.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeOfType&lt;T&gt;(<span style="color:Blue;">this</span> T source, Type type)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeOfType&lt;T&gt;(<span style="color:Blue;">this</span> T source, Type type, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> T ShouldNotBeOfType&lt;T&gt;(<span style="color:Blue;">this</span> T source, Type type, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">false</span>.ShouldNotBeOfType(<span style="color:Blue;">typeof</span>(<span style="color:Blue;">string</span>));
+   <span style="color:#A31515;">&quot;foo&quot;</span>.ShouldNotBeOfType(<span style="color:Blue;">typeof</span>(<span style="color:Blue;">bool</span>));
+}
+</pre></div><b>Supported Releases:</b> All</div><div class="ClearBoth"></div>

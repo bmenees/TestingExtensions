@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Great suggestion.  The signature has been changed.",
+    "ClosedDate": "2010-11-17T14:54:44.22-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Great library! I like it.\n \nPlease change the signature from this:\n \npublic static Exception ShouldThrowException<TExceptionType>(Action action) \npublic static Exception ShouldThrowException<TExceptionType>(Action action, string message) \npublic static Exception ShouldThrowException<TExceptionType>(Action action, string message, params object[] parameters) \n \nto:\n \npublic static TExceptionType ShouldThrowException<TExceptionType>(Action action) \npublic static TExceptionType ShouldThrowException<TExceptionType>(Action action, string message) \npublic static TExceptionType ShouldThrowException<TExceptionType>(Action action, string message, params object[] parameters) \n \nThis way, one could do further assertions on the returned exception to check the expected exception was thrown. For example, the exception might have a Status or ErrorCode property on it that one might want to assert has a specific value.",
+    "LastUpdatedDate": "2013-05-14T19:10:59.353-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "vstestingextensions",
+    "ReportedDate": "2009-08-12T18:29:33.97-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Testing.ShouldThrowException should return TExceptionType not Exception",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 2425
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

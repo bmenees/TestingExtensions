@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-11-17T14:55:42.447-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add assertions for ICollection<T> types.\nExamples include: \n  ShouldBeEmpty()\n  ShouldNotBeEmpty()\n  ShouldHaveCount()\n  ShouldContain()",
+    "LastUpdatedDate": "2013-05-14T19:10:59.623-07:00",
+    "PlannedForRelease": "Visual Studio Testing Extensions 1.1",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "vstestingextensions",
+    "ReportedDate": "2009-02-06T19:20:57.827-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add ICollection<T> Assertions",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 932
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Associated with changeset 9438.",
+      "PostedDate": "2009-02-06T20:57:53.77-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Associated with changeset 9440.",
+      "PostedDate": "2009-02-06T21:13:02.527-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-11-17T14:55:42.447-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-12T17:48:34.297-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-14T19:10:59.623-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

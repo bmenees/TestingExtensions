@@ -1,0 +1,42 @@
+<div class="wikidoc"><h2>Boolean Assertions</h2>These assertion extension methods can be applied to only boolean object types.<br />
+<ul><li><a href="#ShouldBeFalse">ShouldBeFalse</a></li>
+<li><a href="#ShouldBeTrue">ShouldBeTrue</a></li></ul>
+<br /><a name="ShouldBeFalse"></a>
+<h3>ShouldBeFalse</h3>Asserts that this boolean value is false.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span> ShouldBeFalse(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span> source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span> ShouldBeFalse(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span> source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span> ShouldBeFalse(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span> source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span>? ShouldBeFalse(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span>? source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span>? ShouldBeFalse(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span>? source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span>? ShouldBeFalse(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span>? source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">bool</span> foo = <span style="color:Blue;">false</span>;
+   foo.ShouldBeFalse();
+
+   <span style="color:Blue;">bool</span>? bar= <span style="color:Blue;">false</span>;
+   bar.ShouldBeFalse();
+}
+</pre></div><b>Supported Releases:</b> All<br /><br /><a name="ShouldBeTrue"></a>
+<h3>ShouldBeTrue</h3>Asserts that this boolean value is true.
+<h4>Usage</h4><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span> ShouldBeTrue(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span> source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span> ShouldBeTrue(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span> source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span> ShouldBeTrue(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span> source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span>? ShouldBeTrue(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span>? source)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span>? ShouldBeTrue(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span>? source, <span style="color:Blue;">string</span> message)
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">bool</span>? ShouldBeTrue(<span style="color:Blue;">this</span> <span style="color:Blue;">bool</span>? source, <span style="color:Blue;">string</span> message, <span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] parameters)
+</pre></div><h4>Example</h4><div style="color:Black;background-color:White;"><pre>
+[TestMethod]
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Test()
+{
+   <span style="color:Blue;">bool</span> foo = <span style="color:Blue;">true</span>;
+   foo.ShouldBeTrue();
+
+   <span style="color:Blue;">bool</span>? bar= <span style="color:Blue;">true</span>;
+   bar.ShouldBeTrue();
+}
+</pre></div><b>Supported Releases:</b> All</div><div class="ClearBoth"></div>

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "548348",
+    "ThreadId": "241530",
+    "Html": "\r\n<p>I am trying to use this in a VS 2008 project with Framework 3.5. When I add a reference I get the error&nbsp;resolved file has a bad image, no metadata, or is otherwise inaccessible.&nbsp;</p>\r\n<p>I suspect this is the problem:&nbsp;<a href=\"http://stackoverflow.com/questions/2655763/referenced-assembly-wont-load\">http://stackoverflow.com/questions/2655763/referenced-assembly-wont-load</a></p>\r\n<p>I have built it locally (by adding the source code to a VS2008 project) and now it works. However it would be nice it I didn't have to do that.</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-01-12T16:35:37.44-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

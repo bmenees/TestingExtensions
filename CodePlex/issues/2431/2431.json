@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Added some basic DateTime assertions and plan to add some additional ones.",
+    "ClosedDate": "2010-11-18T06:58:26.047-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It would be good if there was DateTime extensions.",
+    "LastUpdatedDate": "2013-05-14T19:10:58.917-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "vstestingextensions",
+    "ReportedDate": "2009-08-13T21:10:58.567-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "DateTime extensions",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 2431
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

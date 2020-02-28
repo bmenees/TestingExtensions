@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "153971",
+    "ThreadId": "46132",
+    "Html": "If anyone has any feature requests, please post them here. <br>\r\n<br>\r\nI am going to keep a running list of things that I plan to add to the next version:<br>\r\n<ul>\r\n    <li>Assertions for IEnumerable</li>\r\n    <li>Assertions for DateTime</li>\r\n</ul>\r\n",
+    "PostedDate": "2009-02-03T14:14:54.193-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183581",
+    "ThreadId": "46132",
+    "Html": "Hi --<br>\r\n<br>\r\nI would love to have the ability to run tests and ignore exceptions.  So, for example, I am testing some functionality in the production code and it encounters an exception that my application knows about and eats, at the moment, as I currently understand the testing framework, the test will stop and fail nonetheless.  I would like an easy way to specify that I want the test to ignore that exception and continue executing.<br>\r\n<br>\r\nDon't know if this is possible, but it's worth a thought.<br>\r\n<br>\r\nRegards,<br>\r\n<br>\r\nMike\r\n",
+    "PostedDate": "2009-04-25T08:03:55.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "548397",
+    "ThreadId": "46132",
+    "Html": "\r\n<p>&#43;1 for IEnumerable.</p>\r\n<p>And its not that hard, just change ICollection to IEnumerable, and use Count(). It worked for me :o)</p>\r\n",
+    "PostedDate": "2011-01-12T18:27:53.897-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

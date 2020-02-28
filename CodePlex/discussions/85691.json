@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "291863",
+    "ThreadId": "85691",
+    "Html": "<p>Suggest some expansion on String Assertions:</p>\r\n<ul>\r\n<li>stringVar.ShouldContain(&quot;findme&quot;);</li>\r\n<li>stringVar.ShouldNotContain(&quot;findme&quot;);</li>\r\n</ul>\r\n<p>It could also include variations such as Case Ignored or Not.</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2010-02-17T12:54:29.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "523946",
+    "ThreadId": "85691",
+    "Html": "\r\n<p>Thanks for the feedback.&nbsp; These assertions have been included in the latest source.</p>\r\n",
+    "PostedDate": "2010-11-18T11:22:35.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
