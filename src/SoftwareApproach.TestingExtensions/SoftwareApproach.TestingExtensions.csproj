@@ -10,6 +10,7 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<NoWarn>1701;1702;3021</NoWarn>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageTags>testing unittesting</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
