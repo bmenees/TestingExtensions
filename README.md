@@ -1,4 +1,8 @@
 # SoftwareApproach.TestingExtensions
+[NuGet Package](https://www.nuget.org/packages/SoftwareApproach.TestingExtensions/)
+![NuGet Downloads](https://img.shields.io/nuget/dt/SoftwareApproach.TestingExtensions)
+
+## History
 This is a "fork" of the [Visual Studio Testing Extensions](https://archive.codeplex.com/?p=vstestingextensions)
 (vstestingextensions) project that was originally created on CodePlex by [Jeremiah Clark](https://twitter.com/JeremiahClark). He released versions 1.0-[1.2](https://www.nuget.org/packages/VisualStudioTestingExtensions) between 2009 and 2012, and his releases targeted .NET Framework 4.0 using MSTest V1. The project was also known as SoftwareApproach.TestingExtensions because that's the assembly name and namespace it used.
 
