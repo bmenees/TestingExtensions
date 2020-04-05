@@ -6,8 +6,8 @@
 		<Product>SoftwareApproach.TestingExtensions</Product>
 		<Authors>Jeremiah Clark</Authors>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageProjectUrl>https://github.com/bmenees/TestingExtensions</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/bmenees/TestingExtensions</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/menees/TestingExtensions</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/menees/TestingExtensions</RepositoryUrl>
 
 		<AssemblyVersion>2.0.0.0</AssemblyVersion>
 		<FileVersion>2.0.0.0</FileVersion>
